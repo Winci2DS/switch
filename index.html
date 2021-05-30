@@ -1,0 +1,100 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>The Homebrew Launcher - 3DS</title>
+    <meta name="keywords" content="homebrew" />
+    <meta name="description" content="ds" />
+    <link href='http://fonts.googleapis.com/css?family=Homenaje' rel='stylesheet' type='text/css'>
+    <link href="https://smealum.github.io/3ds/hbrew.css" rel="stylesheet" type="text/css" media="all" /><link rel="shortcut icon" href="images/icon.png"/>
+    <script>
+        // pretty masterful javascript code here
+        // i wrote it myself
+        function toggleDisplay(id)
+        {
+            var el = document.getElementById(id);
+            if(el.style.display == "none") el.style.display = "block";
+            else el.style.display = "none";
+        }
+
+        function getUrlFromVersion(v)
+        {
+            return "http://smealum.github.io/ninjhax2/JL1Xf2KFVm/otherapp/"+getFilenameFromVersion(v)+".bin";
+        }
+
+        function getRopbinUrlFromVersion(v)
+        {
+            return "http://smealum.github.io/ninjhax2/JL1Xf2KFVm/r/"+getFilenameFromVersion(v)+".bin";
+        }
+
+        var global_version = {};
+
+        function updatePayload()
+        {
+            document.location.href = getUrlFromVersion([global_version[1], global_version[2], global_version[3], global_version[4], global_version[5], global_version[0]]);
+        }
+
+        function updateRopbin()
+        {
+            document.location.href = getRopbinUrlFromVersion([global_version[1], global_version[2], global_version[3], global_version[4], global_version[5], global_version[0]]);
+        }
+    </script>
+    <script src="payload_select.js"></script>
+
+<style type='text/css'>
+        .firmware-form {
+            /*margin-top:300px;*/
+            text-align:center;
+            font-size:18px;
+        }
+        .firmware-form select {
+            /*width:50px;*/
+            height:40px;
+            font-size:18px;
+            text-align:center;
+            border: 1px solid #000000;
+            background: #ffffff;
+            color: #000000;
+        }
+
+        .firmware-form button {
+            border: 1px solid #000000;
+            background: #ffffff;
+            border-radius: 0px;
+            box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 0px 0;
+            color: #000000;
+            font-family: helvetica, serif;
+            height:40px;
+            font-size:18px;
+            text-decoration: none;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+
+<center>   
+<img src="https://smealum.github.io/3ds/images/logo.png" alt="The Homebrew Launcher" width="400"/>   
+<center>
+
+<div class="content">
+        MiiHax Switch Edition
+    </div>
+
+    <div class="content">
+            <a href="javascript:toggleDisplay('menu_content');"><table> <tr>
+                <td> <img src="Icon.png" width="60" style="margin-right: 8px; border-radius: 5px;"> </td>
+                <td style="font-size: 1.2em;"> N3DS Secure Update</td>
+            </tr> </table></a>
+            <div id="menu_content" style="display: none;">
+                (Test App) <a href="https://github.com/winci2ds/">Launch</a>            
+ </div>
+
+         
+    
+    
+    </div>
+</body>
+</html>
